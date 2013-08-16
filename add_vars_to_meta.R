@@ -13,7 +13,7 @@ setwd(.full.path)
 vars <- read.csv("variables.csv", stringsAsFactors = F)
 
 test_that("Source data has the required column names", {
-  expect_true(all(c("Database","Name","Table","Description", "foo") %in% names(vars)))
+  expect_true(all(c("Database","Name","Table","Description") %in% names(vars)))
 })
 
 for (i in 1:nrow(vars)) {
