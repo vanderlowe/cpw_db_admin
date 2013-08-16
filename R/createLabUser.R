@@ -1,3 +1,5 @@
+# Creates a lab user with standard access privileges to common tables
+
 createLabUser <- function(user, password) {  
   # Start by dropping the user
   try(magicSQL(sprintf("DROP USER '%s'@'%%';", user), "cpw_meta"), silent = T)
